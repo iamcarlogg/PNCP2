@@ -21,7 +21,7 @@ public class BookService {
         Book book = new Book();
         book.setTitle(bookInfo.getTitle());
         book.setAuthor(bookInfo.getAuthor());
-        book.setISBN(bookInfo.getISBN());
+        book.setISBN(bookInfo.getIsbn());
         book.setPublicationYear(bookInfo.getPublicationYear());
         book.setLanguage(bookInfo.getLanguage());
         book.setPages(bookInfo.getPages());

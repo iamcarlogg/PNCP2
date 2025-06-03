@@ -21,7 +21,7 @@ public class CreateBookDto {
 
     @NotBlank
     @NotNull
-    private String ISBN;
+    private String isbn;
 
 
     @NotNull
