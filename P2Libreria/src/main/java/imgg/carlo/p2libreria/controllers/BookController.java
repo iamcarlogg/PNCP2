@@ -26,7 +26,7 @@ public class BookController {
             return ResponseEntity.badRequest().build();
         }
     }
-   
+
     @GetMapping("/{ISBN}")
     public ResponseEntity<Book> findBook(@PathVariable("ISBN") String ISBN) {
         try {
