@@ -1,5 +1,7 @@
 package imgg.carlo.p2libreria.entities.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -26,10 +28,18 @@ public class CreateBookDto {
 
     @NotBlank
     @NotNull
-    private Year publisher;
+    @Min(value = 1900)
+    @Max(value = 2025)
+    private Integer publicationYear;
+
 
     @NotBlank
     @NotNull
+    private String language;
+
+    @NotBlank
+    @NotNull
+    @Min(value = 10)
     private Integer pages;
 
     @NotBlank

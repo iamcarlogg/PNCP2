@@ -22,11 +22,11 @@ public class Book
     private String title;
     @Column(name = "author", nullable = false)
     private String author;
-    @Column(name = "ISBN", nullable = false, length = 13)
+    @Column(name = "ISBN", nullable = false, length = 13, unique = true)
     private String ISBN;
     @Column(name = "publicationYear", nullable = false)
-    private Year publicationYear;
-    @Column (name = "language", nullable = false)
+    private Integer publicationYear;
+    @Column (name = "language", nullable = true)
     private String language;
     @Column (name = "pages", nullable = false)
     private Integer pages;
