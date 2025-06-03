@@ -1,0 +1,80 @@
+type: spec.insomnia.rest/5.0
+name: Libreria weona
+meta:
+  id: wrk_aa5c53d1985d41ce9f2296ef4f7ab9be
+  created: 1748916961358
+  modified: 1748916961358
+collection:
+  - url: http://localhost:8190/books/create
+    name: Publicar libro
+    meta:
+      id: req_659d0e51b81b4e87930daba8f2c05ec1
+      created: 1748916973588
+      modified: 1748921860999
+      isPrivate: false
+      sortKey: -1748916973588
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "{% faker 'randomUUID' %}",
+          "title": "perro: gringo 3",
+          "author": "pedro",
+          "isbn": "1111111111118",
+          "publicationYear": 2002,
+          "language": "esp",
+          "pages": 30,
+          "genre": "feli"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8190/books/1111111111111
+    name: Buscar por id
+    meta:
+      id: req_cfa79c2f028b43cf9c5822228e4965d5
+      created: 1748921698095
+      modified: 1748921928222
+      isPrivate: false
+      sortKey: -1748921698095
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_381c83a927105b1cdb1b3569816d635f8353e221
+    created: 1748916961370
+    modified: 1748916961370
+environments:
+  name: Base Environment
+  meta:
+    id: env_381c83a927105b1cdb1b3569816d635f8353e221
+    created: 1748916961367
+    modified: 1748916961367
+    isPrivate: false
+spec:
+  meta:
+    id: spc_b1fa733273a04a84bc54755751a71c97
+    created: 1748916961361
+    modified: 1748916961361
